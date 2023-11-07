@@ -1,0 +1,18 @@
+.inputCounter{
+    /* color:pink */
+    border-radius: 25px;
+    border-width: thin;
+    width: 50px;
+    text-align: center;
+    border: 1px gray solid;
+}
+
+.defaultCheckbox{
+    width: 20px;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+}
+
+
