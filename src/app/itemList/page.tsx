@@ -5,7 +5,7 @@ import './itemlist.css';
 
 
 
-const page = () => {
+const Page = () => {
     // const handleSelect = (e: any) => {
     //     console.log(e);
     // }
@@ -61,19 +61,21 @@ const page = () => {
     //     setCounter(0)
     // }
 
-    const [state, setState] = useState({
+    const [state, setState] = useState<any>({
         checked: []
     });
 
     const toggleCheck = (e: any) => {
+        console.log(e.target.id)
         let checkedArr = state.checked;
-        checkedArr.filter(name => name === e.target.id)[0]
-            ? checkedArr = checkedArr.filter(name => name !== e.target.id)
+        const pushVal = e.target.id;
+        checkedArr.filter((name: any) => name === e.target.id)[0]
+            ? checkedArr = checkedArr.filter((name: any) => name !== e.target.id)
             : checkedArr.push(e.target.id);
         setState({ checked: checkedArr })
     };
 
-    const isChecked = (id: any) => state.checked.filter(name => name === id)[0] ? true : false
+    const isChecked = (id: any) => state.checked.filter((name: any) => name === id)[0] ? true : false
 
 
 
@@ -239,7 +241,7 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
 
 
 

@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import Logo from '../../../public/assets/images/dmetran_logo.png'
 import './navbar.css';
-import ItemList from '../itemList/page.tsx';
+import ItemList from '../itemList/page';
 
 import { useState } from 'react';
 import {
@@ -17,7 +17,7 @@ import {
     MDBNavbarBrand,
 } from 'mdb-react-ui-kit';
 
-const page = () => {
+const Page = () => {
     const [justifyActive, setJustifyActive] = useState('tab1');
 
     const handleJustifyClick = (value: string) => {
@@ -71,7 +71,7 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
 
 
 
